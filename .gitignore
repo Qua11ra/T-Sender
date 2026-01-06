@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/test-results
 
 # next.js
 /.next/
@@ -19,6 +20,8 @@
 
 # production
 /build
+/.cache-synpress
+/cypress
 
 # misc
 .DS_Store

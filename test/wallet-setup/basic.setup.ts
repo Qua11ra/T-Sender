@@ -8,5 +8,4 @@ export default defineWalletSetup(PASSWORD, async (context, walletPage) => {
     const metamask = new MetaMask(context, walletPage, PASSWORD)
 
     await metamask.importWallet(SEED_PHRASE)
-    await metamask.addNetwork({ name: 'Anvil', rpcUrl: 'http://127.0.0.1:8545', chainId: 31337, symbol: 'ETH' })
 })
