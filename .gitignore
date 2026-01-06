@@ -12,7 +12,9 @@
 
 # testing
 /coverage
-/test-results
+test-results/
+cypress/
+playwright-report/
 
 # next.js
 /.next/
@@ -20,8 +22,7 @@
 
 # production
 /build
-/.cache-synpress
-/cypress
+.cache-synpress/
 
 # misc
 .DS_Store
@@ -42,3 +43,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.gitignore
