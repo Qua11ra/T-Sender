@@ -6,21 +6,46 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "biome check",
+    "format": "biome format --write",
+    "anvil": "anvil --load-state tsender-deployed.json",
+    "coverage": "jest run --coverage",
+    "test:unit": "jest",
+    "test:cache": "synpress",
+    "test:e2e": "exec playwright test",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
+    "@metamask/sdk": "^0.34.0",
+    "@rainbow-me/rainbowkit": "^2.2.10",
+    "@synthetixio/synpress": "^4.1.1",
+    "@tanstack/react-query": "^5.90.16",
+    "@types/jest": "^30.0.0",
+    "cypress": "^15.8.1",
+    "jest": "^30.2.0",
     "next": "16.1.1",
+    "playwright": "^1.57.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-icons": "^5.5.0",
+    "ts-jest": "^29.4.6",
+    "viem": "2.x",
+    "wagmi": "^3.1.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.1",
+    "babel-plugin-react-compiler": "1.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "resolutions": {
+    "@synthetixio/synpress": {
+      "metamask": "10.21.0"
+    }
   }
 }
